@@ -1,0 +1,23 @@
+class Palindrome{
+    public static Boolean checkNumber(int n){
+        int rem,sum=0, temp=n;
+        if (n <0){
+            return false;
+        }
+        while (n>0){
+            rem= n%10;
+            sum = (sum*10)+rem;
+            n= n/10;
+        }
+        if(temp==sum){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    public static void main(String[] args) {
+        int n = 121;
+        System.out.println(checkNumber(n));
+    }
+}
